@@ -19,4 +19,4 @@ const server = createServer(async (req,res) => {
   } catch {res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'}).end('Страница не найдена');}
 });
 server.on('error', error => {console.error(error.code === 'EADDRINUSE' ? `Порт ${port} занят. Запустите с PORT=4174 npm start` : error.message);process.exit(1);});
-server.listen(port,'127.0.0.1',()=>console.log(`ПИРСBET → http://127.0.0.1:${port}\nТолько на этом компьютере. Для остановки: Ctrl+C.`));
+server.listen(port,'127.0.0.1',()=>console.log(`DIRSBET → http://127.0.0.1:${port}\nТолько на этом компьютере. Для остановки: Ctrl+C.`));

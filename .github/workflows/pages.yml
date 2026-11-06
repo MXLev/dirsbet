@@ -1,4 +1,4 @@
-name: Test and deploy PIRS BET
+name: Test and deploy DIRS BET
 
 on:
   push:

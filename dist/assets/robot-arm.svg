@@ -14,6 +14,6 @@
     <path d="m285 56-6-25 14-14 8 7-12 13 6 15z" fill="#e9f2ff"/><path d="m307 64 26-12 5-23-11-2-4 18-22 9z" fill="#e9f2ff"/>
   </g>
   <g transform="translate(307 26) rotate(-22)"><ellipse rx="22" ry="27" fill="#5c8fd6" stroke="#0d418a" stroke-width="2"/><ellipse cx="-5" rx="22" ry="27" fill="#99b9e6" stroke="#0d418a" stroke-width="2"/><ellipse cx="-5" rx="16" ry="20" stroke="#5c8fd6"/><path d="M-15-11H5M-5-11v24" stroke="#5c8fd6" stroke-width="3"/></g>
-  <g fill="#c0daff" font-family="monospace" font-size="9"><text x="32" y="107">INTUITION_ENGINE</text><text x="32" y="122">v.1.0 / ONLINE</text><text x="328" y="185">θ = MAYBE</text><text x="290" y="372">FIG. 01 / ПИРС</text></g>
+  <g fill="#c0daff" font-family="monospace" font-size="9"><text x="32" y="107">INTUITION_ENGINE</text><text x="32" y="122">v.1.0 / ONLINE</text><text x="328" y="185">θ = MAYBE</text><text x="290" y="372">FIG. 01 / DIRS</text></g>
   <g stroke="#b5d4ff"><path d="m135 116 27 30M313 189l-32-50M65 264h62l29-37"/><circle cx="135" cy="116" r="2" fill="#99b9e6"/><circle cx="313" cy="189" r="2" fill="#99b9e6"/><path d="M36 40h14m-7-7v14M389 279h14m-7-7v14"/></g>
 </svg>
