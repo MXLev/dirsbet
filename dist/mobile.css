@@ -1,0 +1,186 @@
+/* Shared balance control. The plus is an SVG, independent of the font baseline. */
+.wallet { white-space: nowrap; }
+.wallet strong { font-variant-numeric: tabular-nums; line-height: 1; }
+.wallet-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  line-height: 1;
+  background: #edf3fc;
+  color: #164e9b;
+}
+.wallet-plus .icon { display: block; width: 16px; height: 16px; stroke-width: 2; }
+
+@media (max-width: 760px) {
+  /* Compact header with room for the complete balance, even at 320px. */
+  body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
+  body.has-slip { padding-bottom: calc(144px + env(safe-area-inset-bottom)); }
+  .topbar { height: 68px; padding: 0 18px; background: #fff; gap: 12px; }
+  .topbar-context { flex: 0 1 auto; min-width: 0; gap: 8px; }
+  .context-mark { display: none; }
+  .mobile-brand { font-size: 20px; letter-spacing: -1px; color: #113b7b; }
+  .topbar-actions { gap: 0; flex-shrink: 0; }
+  .topbar-actions .profile { display: none; }
+  .wallet { min-height: 42px; padding: 6px 7px 6px 10px; gap: 8px; border-color: #d8e3f2; border-radius: 10px; }
+  .wallet strong { font-size: 15px; color: #173d74; }
+  .wallet .coin { width: 21px; height: 21px; font-size: 12px; }
+  .wallet-plus { margin-left: 2px; border-radius: 6px; }
+  .parody-bar { padding: 9px 14px; background: #f4f7fc; }
+  .parody-bar > span:first-child { font-size: 8px; line-height: 1.5; letter-spacing: .15px; white-space: normal; text-align: center; color: #5e7492; }
+  main { padding: 20px 18px 24px; }
+  .page-heading { margin-bottom: 16px; }
+  .page-heading h1 { font-size: 22px; line-height: 1.3; letter-spacing: -.7px; }
+  .heading-right { display: none; }
+
+  /* A mobile composition, with the illustration behind a short readable message. */
+  .hero { min-height: 0; padding: 24px 22px; border-radius: 12px; }
+  .hero-copy { width: 100%; }
+  .hero .eyebrow { font-size: 8px; letter-spacing: .4px; color: #d5e5ff; }
+  .hero h2 { font-size: clamp(25px, 8vw, 37px); line-height: 1.1; letter-spacing: -1.2px; margin: 19px 0 13px; }
+  .hero p { font-size: 12px; line-height: 1.7; max-width: 280px; color: #e1ecff; }
+  .hero-art { width: 310px; height: 300px; right: -84px; top: 4px; opacity: .22; }
+  .hero-cta { margin-top: 18px; min-height: 43px; padding: 12px 15px; font-size: 11px; gap: 24px; }
+  .hero-cta .icon { width: 17px; height: 17px; }
+  .stats-strip { padding: 18px 0; margin-bottom: 23px; gap: 8px; }
+  .stat { gap: 7px; }
+  .stat strong { font-size: 24px; }
+  .stat span { font-size: 9px; line-height: 1.55; color: #63758f; }
+  .section-heading { margin-bottom: 15px; }
+  .section-heading h2 { font-size: 18px; line-height: 1.35; letter-spacing: -.6px; }
+  .filter-tabs { gap: 7px; padding-bottom: 14px; }
+  .filter-tab { min-height: 39px; padding: 9px 13px; font-size: 11px; border-radius: 7px; }
+  .filter-tab .count { font-size: 10px; }
+  .market-toolbar { margin-bottom: 16px; gap: 8px; }
+  .search input { height: 42px; font-size: 11px; padding-left: 32px; border-radius: 7px; background: #fff; }
+  .search .icon { top: 13px; left: 10px; }
+  .market-toolbar select { height: 42px; width: 119px; font-size: 10px; border-radius: 7px; padding-left: 9px; background: #fff; }
+
+  /* Comfortable labels and tap targets. Three-outcome cards keep every label. */
+  .markets-grid { grid-template-columns: 1fr; gap: 15px; }
+  .market-card { padding: 16px 18px 0; border-radius: 12px; }
+  .market-meta { font-size: 10px; margin-bottom: 10px; min-height: 36px; gap: 7px; }
+  .market-icon { width: 29px; height: 29px; }
+  .market-icon .icon { width: 17px; height: 17px; }
+  .hot-tag { font-size: 8px; padding: 3px 5px; }
+  .favorite { width: 40px; height: 40px; margin-top: -4px; margin-right: -8px; padding: 10px; }
+  .favorite .icon { width: 18px; height: 18px; }
+  .market-card h3 { font-size: 17px; line-height: 1.45; letter-spacing: -.45px; }
+  .market-description { font-size: 12px; line-height: 1.7; color: #687c96; margin: 8px 0 17px; }
+  .fiction-note { font-size: 10px; color: #687a99; line-height: 1.5; margin-bottom: 12px; }
+  .outcomes { gap: 8px; margin-bottom: 16px; }
+  .outcome { min-height: 75px; padding: 11px 10px; gap: 8px; border-radius: 8px; background: #f0f5fc; border-color: #dce6f4; }
+  .outcome .option-label { font-size: 11px; line-height: 1.4; font-weight: 550; }
+  .outcome strong { font-size: 20px; line-height: 1.2; letter-spacing: -.3px; }
+  .outcome.selected { background: var(--blue); border-color: var(--blue); }
+  .outcome.selected:after { right: 9px; bottom: 11px; }
+  .market-footer { font-size: 8px; line-height: 1.5; padding: 12px 0; color: #6a7d97; }
+  .market-state { font-size: 9px; }
+  .results-count { font-size: 8px; line-height: 1.7; text-align: left; }
+
+  /* Bottom navigation and a coupon action that appears only after a selection. */
+  .mobile-nav { min-height: 68px; padding: 6px 9px max(6px,env(safe-area-inset-bottom)); background: #fff; gap: 3px; }
+  .mobile-nav .nav-button { min-height: 54px; padding: 7px 3px; font-size: 9px; gap: 5px; border-radius: 9px; color: #647c9b; }
+  .mobile-nav .nav-button .icon { width: 21px; height: 21px; }
+  .mobile-nav .nav-button.active { background: #eef4ff; color: #0050cf; }
+  .mobile-slip-button { bottom: calc(80px + env(safe-area-inset-bottom)); min-height: 52px; padding: 15px 17px; border-radius: 10px; font-size: 13px; }
+  .mobile-slip-button small { font-size: 11px; }
+  .coupon-head { padding: 13px 20px; }
+  .coupon-title h2 { font-size: 18px; }
+  .coupon-title .icon { width: 21px; height: 21px; }
+  .coupon-count { font-size: 11px; padding: 2px 6px; }
+  .coupon-actions { gap: 0; }
+  .coupon-actions .icon-button { width: 40px; height: 40px; }
+  .coupon-actions .icon { width: 19px; height: 19px; }
+  .coupon-mode { margin: 0 20px; }
+  .coupon-mode button { min-height: 41px; font-size: 12px; }
+  .coupon-items { padding: 6px 20px; }
+  .coupon-item { padding: 14px 0; }
+  .coupon-item h3 { font-size: 13px; line-height: 1.6; }
+  .coupon-item .icon-button { min-width: 32px; min-height: 32px; margin-top: -5px; }
+  .coupon-item-choice { font-size: 12px; }
+  .coupon-item-choice strong { font-size: 16px; }
+  .coupon-body { padding: 18px 20px 22px; }
+  .stake-label { font-size: 13px; margin-bottom: 10px; }
+  .stake-label span { font-size: 9px; }
+  .stake-input input { min-height: 52px; font-size: 22px; border-radius: 8px; padding: 12px 45px 12px 13px; }
+  .stake-input .coin { top: 15px; right: 13px; }
+  .stake-presets { gap: 8px; margin: 9px 0 20px; }
+  .stake-presets button { min-height: 35px; font-size: 12px; border-radius: 6px; }
+  .coupon-line { font-size: 12px; margin-bottom: 13px; }
+  .coupon-line strong { font-size: 13px; }
+  .coupon-total { padding: 15px 0 18px; }
+  .coupon-total > span { font-size: 12px; }
+  .coupon-total strong { font-size: 27px; }
+  .coupon-total small { font-size: 10px; }
+  .coupon .primary-button { min-height: 49px; font-size: 13px; border-radius: 8px; }
+  .coupon-bottom { font-size: 8px; padding: 12px; }
+  body.slip-open .coupon { max-height: 92dvh; padding-bottom: env(safe-area-inset-bottom); }
+
+  /* Secondary screens get the same reading scale as the market. */
+  .view-intro { padding: 22px; border-radius: 12px; margin-bottom: 18px; }
+  .view-intro h2 { font-size: 25px; line-height: 1.25; }
+  .view-intro p { font-size: 12px; line-height: 1.8; color: #607b9d; }
+  .modal-label { font-size: 9px; margin-bottom: 8px; }
+  .history-stats { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+  .history-stat { padding: 16px; border-radius: 10px; }
+  .history-stat span { font-size: 11px; }
+  .history-stat strong { font-size: 27px; }
+  .history-card { padding: 18px; border-radius: 12px; }
+  .history-id { font-size: 10px; }
+  .status-pill { font-size: 10px; padding: 5px 8px; }
+  .history-leg h3 { font-size: 14px; line-height: 1.5; }
+  .history-leg p { font-size: 12px; line-height: 1.6; }
+  .history-leg .leg-result { font-size: 10px!important; }
+  .history-leg > span { font-size: 13px; }
+  .history-footer { font-size: 11px; gap: 15px; }
+  .history-footer strong { font-size: 13px; }
+  .leader-person strong { font-size: 13px; }
+  .leader-person p { font-size: 10px; line-height: 1.6; }
+  .leader-person .avatar { width: 36px; height: 36px; }
+  .leader-score { font-size: 18px; }
+  .leader-score small { font-size: 10px; }
+  .leader-info { font-size: 11px; }
+  .demo-card { padding: 20px; }
+  .demo-card h3 { font-size: 14px; }
+  .demo-card p { font-size: 12px; }
+  .demo-card .text-link { min-height: 36px; font-size: 12px; }
+  .modal-head h2 { font-size: 21px; }
+  .modal-head .icon-button { width: 38px; height: 38px; }
+  .modal-body { padding: 22px; }
+  .modal-body > p { font-size: 13px; }
+  .modal-form label { font-size: 12px; }
+  .modal-form select { font-size: 13px; min-height: 48px; }
+  .modal-callout { font-size: 12px; }
+  .modal-body .primary-button { min-height: 47px; font-size: 12px; }
+  .modal-bottom { flex-wrap: wrap; gap: 12px; }
+  .modal-bottom span { font-size: 11px; }
+  .modal-bottom .secondary-button { min-height: 40px; }
+  .rules-list strong { font-size: 13px; }
+  .rules-list p { font-size: 12px; }
+  .page-footer { padding: 22px 0 26px; }
+  .page-footer b { font-size: 13px; }
+  .page-footer button { font-size: 11px; min-height: 36px; }
+  .toasts { bottom: calc(145px + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 359px) {
+  .topbar { padding: 0 14px; }
+  main { padding-left: 14px; padding-right: 14px; }
+  .filter-tabs { margin-right: -14px; padding-right: 14px; }
+  .mobile-brand { font-size: 18px; }
+  .wallet { gap: 6px; padding-left: 8px; }
+  .wallet strong { font-size: 14px; }
+  .hero { padding: 22px 18px; }
+  .hero p { font-size: 11px; }
+  .stat { gap: 6px; }
+  .stat strong { font-size: 22px; }
+  .stat span { font-size: 8px; }
+  .market-card { padding-left: 14px; padding-right: 14px; }
+  .outcome { padding: 10px 8px; }
+  .outcome .option-label { font-size: 10px; }
+  .mobile-nav .nav-button { font-size: 8px; }
+}

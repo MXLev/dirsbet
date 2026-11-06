@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0050cf">
+  <meta name="description" content="ПИРСBET — студенческий тотализатор на токены. Локальная пародия, не связана с НИУ ВШЭ.">
+  <title>ПИРСBET — Высшая школа прогнозов</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/Manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К событиям</a>
+  <aside class="sidebar" aria-label="Главное меню">
+    <a class="brand" href="#markets" aria-label="ПИРСBET — главная"><span class="brand-symbol">↗</span><span>ПИРС<span class="brand-bet">BET</span><small>БЮРО СТУДЕНЧЕСКИХ ПРОГНОЗОВ</small></span></a>
+    <div class="sidebar-section-label">НАВИГАЦИЯ / 01</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-experiment"><span class="mini-cross">+</span><div class="mono">ЭКСПЕРИМЕНТ № 001</div><h3>Теория вероятностей.<br>Практика выживания.</h3><p>Роботы учатся на ошибках.<br>Мы — на дедлайнах.</p><span class="experiment-line"></span></div>
+    <div class="sidebar-bottom" id="sidebar-bottom"></div>
+    <div class="sidebar-footer"><span class="status-dot"></span> LOCAL / DEMO <span>v1.0</span></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="topbar-context"><span class="context-mark">П /</span><div><b class="desktop-title">Студенческая лига</b><b class="mobile-brand">ПИРСBET</b><span>ПИРС · робототехника и немного удачи</span></div></div><div class="topbar-actions"><span class="demo-tag"><span class="status-dot"></span> ДЕМО-РЕЖИМ</span><button class="wallet" id="wallet" data-action="bonus" aria-label="Демонстрационный баланс"></button><button class="profile" data-action="view" data-view="leaders" aria-label="Место в таблице лидеров">Я</button></div></header>
+    <div class="parody-bar"><span>ПАРОДИЯ, НЕ СВЯЗАНА С НИУ ВШЭ</span><span>Только токены. Всё остальное — предположения.</span></div>
+    <div id="storage-warning" class="storage-warning" role="status" hidden></div>
+    <main id="main" tabindex="-1"></main>
+    <footer class="page-footer"><div><b>ПИРСBET</b><span>Высшее образование. Низкая предсказуемость.</span></div><span>0 ₽ · 0 платежей · 100% вымысел</span><button data-action="rules">Правила игры ↗</button></footer>
+  </div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Мобильное меню"></nav>
+  <button class="mobile-slip-button" id="mobile-slip-button" data-action="slip" hidden></button>
+  <div class="slip-backdrop" id="slip-backdrop" data-action="close-slip" hidden></div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toasts" class="toasts" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript">Для работы прогнозов включите JavaScript в браузере.</div></noscript>
+</body>
+</html>

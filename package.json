@@ -1,0 +1,9 @@
+{
+  "name": "pirsbet-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Локальный студенческий тотализатор на токены. Пародия, не связана с НИУ ВШЭ.",
+  "scripts": {"start": "node server.mjs", "test": "node --test tests/*.test.mjs"},
+  "engines": {"node": ">=18"}
+}

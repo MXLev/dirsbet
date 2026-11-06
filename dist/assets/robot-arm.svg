@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 390" fill="none">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#fff" stroke-opacity=".09"/></pattern><pattern id="hash" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V6" stroke="#a2c9ff" stroke-opacity=".6"/></pattern></defs>
+  <path fill="url(#grid)" d="M0 0h450v390H0z"/>
+  <g stroke="#84b7ff" stroke-width="1"><path stroke-dasharray="4 5" d="M45 318h360M231 35v320M30 192h330"/><ellipse cx="235" cy="317" rx="137" ry="48"/><path d="m81 319 22-7m-11 24 22-7m233 0 23-7M156 79a100 100 0 0 1 161 7"/><path d="m314 75 4 14 9-11"/><circle cx="231" cy="192" r="120" stroke-dasharray="2 8"/></g>
+  <g stroke="#0d418a" stroke-width="2" stroke-linejoin="round">
+    <path d="m157 307 77-33 77 35v21l-78 34-76-35z" fill="#a8c8f4"/><path d="m157 307 77 34 77-32-77-35z" fill="#eef5ff"/><path d="M233 341v23"/>
+    <path d="M193 297v-36l41-20 39 20v37l-39 20z" fill="#9ec2f5"/><path d="m234 280 39-19v37l-39 20z" fill="#6d9cdf"/><path d="m193 261 41-20 39 20-39 19z" fill="#dae9ff"/>
+    <path d="m214 271-61-86 32-26 63 85z" fill="#dfecff"/><path d="m248 244-63-85 19-8 65 83-21 10z" fill="#a9c8f4"/><path d="m177 204 17-14 40 54-17 14z" fill="url(#hash)"/>
+    <path d="M145 160c-12 18-5 43 13 53 18 10 40 1 50-18 10-19 4-41-13-51-18-10-38-3-50 16z" fill="#b2d2ff"/>
+    <ellipse cx="175" cy="178" rx="27" ry="32" transform="rotate(30 175 178)" fill="#edf4ff"/><ellipse cx="175" cy="178" rx="15" ry="18" transform="rotate(30 175 178)" fill="#146fee"/><ellipse cx="175" cy="178" rx="6" ry="8" transform="rotate(30 175 178)" fill="#99b9e6"/>
+    <path d="m182 149 61-54 30 30-67 56z" fill="#eef5ff"/><path d="m243 95 19-3 32 30-21 3z" fill="#b1d2ff"/><path d="m273 125 21-3-65 56-23 3z" fill="#8fb9f3"/><path d="m207 142 32-28 13 13-32 28z" fill="#146fee"/>
+    <path d="M239 85c-12 12-12 32 0 44s29 13 41 1l12-11c12-12 11-32-1-44-12-12-28-12-40 0z" fill="#a4c7f9"/><circle cx="259" cy="105" r="26" fill="#e8f2ff"/><circle cx="259" cy="105" r="13" fill="#146fee"/><circle cx="259" cy="105" r="5" fill="#99b9e6"/>
+    <path d="m268 81 18-28 25 12-20 28z" fill="#ddebff"/><path d="m286 53 12-3 25 11-12 4z" fill="#a9c8f4"/><path d="m311 65 12-4-19 28-13 4z" fill="#80aded"/>
+    <path d="m285 56-6-25 14-14 8 7-12 13 6 15z" fill="#e9f2ff"/><path d="m307 64 26-12 5-23-11-2-4 18-22 9z" fill="#e9f2ff"/>
+  </g>
+  <g transform="translate(307 26) rotate(-22)"><ellipse rx="22" ry="27" fill="#5c8fd6" stroke="#0d418a" stroke-width="2"/><ellipse cx="-5" rx="22" ry="27" fill="#99b9e6" stroke="#0d418a" stroke-width="2"/><ellipse cx="-5" rx="16" ry="20" stroke="#5c8fd6"/><path d="M-15-11H5M-5-11v24" stroke="#5c8fd6" stroke-width="3"/></g>
+  <g fill="#c0daff" font-family="monospace" font-size="9"><text x="32" y="107">INTUITION_ENGINE</text><text x="32" y="122">v.1.0 / ONLINE</text><text x="328" y="185">θ = MAYBE</text><text x="290" y="372">FIG. 01 / ПИРС</text></g>
+  <g stroke="#b5d4ff"><path d="m135 116 27 30M313 189l-32-50M65 264h62l29-37"/><circle cx="135" cy="116" r="2" fill="#99b9e6"/><circle cx="313" cy="189" r="2" fill="#99b9e6"/><path d="M36 40h14m-7-7v14M389 279h14m-7-7v14"/></g>
+</svg>
